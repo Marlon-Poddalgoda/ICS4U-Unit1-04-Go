@@ -53,31 +53,31 @@ func main() {
 			// ask for user input for number of items
 			fmt.Print("Enter how many " + foodItem + "(s) you are heating (max. 3): ")
 
-    		fmt.Scan(&numOfItems)
+			fmt.Scan(&numOfItems)
 
-    		// process
-    		switch {
-    		case numOfItems == "1":
-    			// cooktime for 1 item
-    			cookTime *= noPercIncrease
-    		case numOfItems == "2":
-    			// cooktime for 2 items
-    			cookTime *= fiftyPercIncrease
-    		case numOfItems == "3":
-    			// cooktime for 3 items
-    			cookTime *= hundredPercIncrease
-    		default:
-    			fmt.Println("That's not an option, try again.")
-    			continue
-    		}
+			// process
+			switch {
+			case numOfItems == "1":
+				// cooktime for 1 item
+				cookTime *= noPercIncrease
+			case numOfItems == "2":
+				// cooktime for 2 items
+				cookTime *= fiftyPercIncrease
+			case numOfItems == "3":
+				// cooktime for 3 items
+				cookTime *= hundredPercIncrease
+			default:
+				fmt.Println("That's not an option, try again.")
+				continue
+			}
 
-    		cookSeconds = cookTime * sixtySeconds
-    		break
+			cookSeconds = cookTime * sixtySeconds
+			break
 		}
 		// output
 		fmt.Println("")
 		fmt.Printf("The total cook time is %v minutes (%v seconds).", cookTime,
-					cookSeconds)
+			cookSeconds)
 		fmt.Println("")
 		fmt.Println("")
 		fmt.Println("Done.")
