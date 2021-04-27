@@ -53,7 +53,7 @@ func main() {
 			// ask for user input for number of items
 			fmt.Print("Enter how many " + foodItem + "(s) you are heating (max. 3): ")
 
-    		fmt.Scanln(&numOfItems)
+    		fmt.Scan(&numOfItems)
 
     		// process
     		switch {
