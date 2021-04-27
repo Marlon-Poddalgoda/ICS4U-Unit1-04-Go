@@ -32,16 +32,17 @@ func main() {
 		fmt.Scanln(&foodItem)
 
 		// check string value
-		if foodItem == "sub" {
+		switch {
+		case foodItem == "sub":
 			// assigning cook time for sub
 			cookTime = subTime
-		} else if foodItem == "pizza" {
+		case foodItem == "pizza":
 			// assigning cook time for pizza
 			cookTime = pizzaTime
-		} else if foodItem == "soup" {
+		case foodItem == "soup":
 			// assigning cook time for soup
 			cookTime = soupTime
-		} else {
+		default:
 			// error catch
 			fmt.Println("That's not an option! Try again.")
 			continue
@@ -55,19 +56,21 @@ func main() {
     		fmt.Scanln(&numOfItems)
 
     		// process
-    		if numOfItems == "1" {
+    		switch {
+    		case numOfItems == "1":
     			// cooktime for 1 item
-    			cookTime = cookTime * noPercIncrease
-    		} else if numOfItems == "2" {
+    			cookTime *= noPercIncrease
+    		case numOfItems == "2":
     			// cooktime for 2 items
-    			cookTime = cookTime * fiftyPercIncrease
-    		} else if numOfItems == "3" {
+    			cookTime *= fiftyPercIncrease
+    		case numOfItems == "3":
     			// cooktime for 3 items
-    			cookTime = cookTime * hundredPercIncrease
-    		} else {
+    			cookTime *= hundredPercIncrease
+    		default:
     			fmt.Println("That's not an option, try again.")
     			continue
     		}
+
     		cookSeconds = cookTime * sixtySeconds
     		break
 		}
